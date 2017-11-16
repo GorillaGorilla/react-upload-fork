@@ -35,6 +35,7 @@ export default class FileUpload extends Component {
   };
 
   componentDidMount() {
+    console.log('hello hello hello component did mount file upload');
     FileAPI.event.on(this.refs.fileInput, 'change', this.handleFileChange);
     FileAPI.event.dnd(this.refs.fileInput, this.handleDragHover, this.handleFileChange);
     document.addEventListener('drop', this.preventDropEvent);
